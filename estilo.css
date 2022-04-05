@@ -1,0 +1,67 @@
+body{
+    background-color: black;
+}
+.juego{
+    max-width: 350px;
+    margin: 40px auto;
+}
+
+button{
+    background-color: none;
+    border: 2px solid #ffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: rgb(171, 201, 40);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+
+}
+
+button:hover{
+    background-color: #c23866;
+    color:#ffff;
+}
+
+.titulo{
+    color:azure;
+}
+
+.grid-carta{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.carta{
+    position:relative;
+}
+.carta img{
+    width: 100%;
+    display: block;
+    border: 2px solid #ffff;
+    border-radius: 6px;
+}
+
+/*efecto de flipp frontal*/
+.carta .frontal {
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+    position: absolute;
+}
+
+.flipped .frontal {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}
+
+/*flip de atras*/
+.carta .atras{
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+}
+
+.flipped .atras{
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
